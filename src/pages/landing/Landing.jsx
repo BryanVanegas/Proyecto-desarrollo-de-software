@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 import styles from "./Landing.module.css";
+const images = [
+  '/PT Sans.jpg',
+
+];
 
 export default function Landing() {
   return (
@@ -28,30 +32,52 @@ export default function Landing() {
           <img src="/fondo_registro.png" alt="Imagen hamburguesa" />
           <div className={styles.banner_texto}>
             <p>DESARROLLAMOS LA FÓRMULA</p>
-            <p>A LA NO TE PODRÁS RESISTIR</p>
+            <br />
+            <br />
+            <br />
+            <br />
+            <p>A LA QUE NO TE PODRÁS RESISTIR</p>
           </div>
 
           <section className={styles.seccionNosotros}>
             <div className={styles.seccionNosotros_texto}>
-              <p>En FoodLab creemos que la buena comida no solo se cocina… ¡se formula! Somos un restaurante
-                de comida rápida donde cada bocado es el resultado de una receta precisa: sabor, calidad y rapidez
+              <p>En FoodLab creemos que la buena comida <br />
+                no solo se cocina… ¡se formula! Somos <br />
+                un restaurante
+                de comida rápida donde cada <br />
+                bocado es el resultado de una receta <br />
+                precisa: sabor, calidad y rapidez<br />
                 en la medida perfecta.</p>
-
-              <p>Inspirados en la creatividad de un laboratorio, combinamos ingredientes frescos,
-                técnicas innovadoras y un toque de locura culinaria para sorprenderte en cada visita.
-                Nuestro objetivo es simple: que disfrutes de tu comida favorita con la fórmula que siempre funciona — rápida,
+              <br />
+              <br />
+              <p>Inspirados en la creatividad de un <br />
+                laboratorio, combinamos ingredientes <br />
+                frescos, técnicas innovadoras y un toque de <br />
+                locura culinaria para sorprenderte en cada <br />
+                visita.Nuestro objetivo es simple: que <br />
+                disfrutes de tu comida favorita con la <br />
+                fórmula que siempre funciona — rápida,<br />
                 deliciosa y con un estilo único.</p>
-
             </div>
             <div className={styles.seccionNosotros_imagen}>
-            <img src="/fondo_nosotros.jpg" alt="Fondo nosotros" />
+              <img src="/pexels-valeriya-1639562.jpg" alt="Fondo nosotros" />
             </div>
           </section >
 
 
+          <section className={styles.carousel}>
+            <button className={styles.arrowLeft}>«</button>
+
+            <div className={styles.container}>
+              <div className={`${styles.item} ${styles.center}`}>
+                <img src="/PT Sans.png" alt="Instalación" />
+              </div>
+            </div>
+
+            <button className={styles.arrowRight}>»</button>
+          </section>
 
         </div>
-
       </main >
     </div >
   );
