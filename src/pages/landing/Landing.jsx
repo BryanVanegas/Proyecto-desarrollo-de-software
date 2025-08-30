@@ -32,7 +32,7 @@ export default function Landing() {
               <p>Contacto</p>
             </div>
           </div>
-          <Link to="/cliente">
+          <Link to="/login">
             <button className={styles.navegacion_boton_realizar_pedido}>
               Realizar Pedido
             </button>
@@ -81,9 +81,22 @@ export default function Landing() {
               <button onClick={handleLeft} className={styles.arrowLeft}>«</button>
 
               <div className={styles.container}>
-                <div className={`${styles.item} ${styles.center}`}>
-                  <img src={images[activeIndex]} alt={`img-${activeIndex}`} />
-                </div>
+                {images.map((img, index) => (
+                  <div
+                    key={index}
+                    className={`${styles.item} ${index === activeIndex ? styles.center : ''}`}
+                    style={{
+                      opacity: index === activeIndex ? 1 : 0,
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      transition: 'opacity 0.5s ease',
+                      pointerEvents: index === activeIndex ? 'auto' : 'none'
+                    }}
+                  >
+                    <img src={img} alt={`img-${index}`} />
+                  </div>
+                ))}
               </div>
 
               <button onClick={handleRight} className={styles.arrowRight}>»</button>
@@ -122,16 +135,16 @@ export default function Landing() {
             </div>
             <div className={styles.contactoInfo}>
               <h3>¡CONTACTANOS!</h3>
-                <img src="/localizacion.png" alt="Localizacion" />
-                <p>Calle 14 #15-23, Barrio La Castellana,<br /> Armenia, Quindío, Colombia</p>
-                <br />
+              <img src="/localizacion.png" alt="Localizacion" />
+              <p>Calle 14 #15-23, Barrio La Castellana,<br /> Armenia, Quindío, Colombia</p>
+              <br />
 
-                <img src="/llamada-telefonica.png" alt="Llamada" />
-                <p>+57 311 456 7890</p>
-                <br />
-                <img src="/correo-electronico.png" alt="Correo" />
-                <p>contacto@foodlab.com.co</p>
-              </div>
+              <img src="/llamada-telefonica.png" alt="Llamada" />
+              <p>+57 311 456 7890</p>
+              <br />
+              <img src="/correo-electronico.png" alt="Correo" />
+              <p>contacto@foodlab.com.co</p>
+            </div>
             <div className={styles.logo_pequeño}>
               <img src="/Logo.png" alt="Logo" />
             </div>
