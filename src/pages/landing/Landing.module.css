@@ -194,12 +194,12 @@ main {
 .container {
   display: flex;
   justify-content: center;
-  perspective: 1000px;
+  perspective: 1200px;
 }
 
 .item {
-  width: 500px;
-  height: 300px;
+  width: 700px;
+  height: 400px;
   overflow: hidden;
   transition: transform 0.5s ease;
 }
@@ -212,7 +212,7 @@ main {
 }
 
 .center {
-  transform: scale(1.05);
+  transform: scale(1.04);
   z-index: 3;
 }
 
@@ -224,6 +224,8 @@ main {
   border: none;
   cursor: pointer;
 }
+
+
 
 @media (max-width: 768px) {
   .navegacion {

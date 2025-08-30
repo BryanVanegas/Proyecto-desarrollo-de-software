@@ -1,12 +1,25 @@
 import { Link } from "react-router-dom";
 import styles from "./Landing.module.css";
-const images = [
-  '/PT Sans.jpg',
-
-];
+import { useState } from 'react';
 
 export default function Landing() {
+  const images = [
+    '/PT Sans.png',
+    '/cocina.jpg',
+    '/logoFoodlab.png',
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleLeft = () => {
+    setActiveIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1));
+  };
+
+  const handleRight = () => {
+    setActiveIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0));
+  };
   return (
+
     <div>
       <header>
         <nav className={styles.navegacion}>
@@ -64,18 +77,18 @@ export default function Landing() {
             </div>
           </section >
 
-
-          <section className={styles.carousel}>
-            <button className={styles.arrowLeft}>«</button>
+          <div className={styles.carousel}>
+            <button onClick={handleLeft} className={styles.arrowLeft}>«</button>
 
             <div className={styles.container}>
               <div className={`${styles.item} ${styles.center}`}>
-                <img src="/PT Sans.png" alt="Instalación" />
+                <img src={images[activeIndex]} alt={`img-${activeIndex}`} />
               </div>
             </div>
 
-            <button className={styles.arrowRight}>»</button>
-          </section>
+            <button onClick={handleRight} className={styles.arrowRight}>»</button>
+          </div>
+
 
         </div>
       </main >
