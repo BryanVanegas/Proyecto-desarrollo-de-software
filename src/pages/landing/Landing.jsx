@@ -88,6 +88,13 @@ export default function Landing() {
 
               <button onClick={handleRight} className={styles.arrowRight}>»</button>
             </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
           </section>
           <div className={styles.fondo_contactanos}>
             <img src="/pexels-liliana-drew-8555066.jpg" alt="Logo" />
@@ -106,22 +113,30 @@ export default function Landing() {
                 <input className={styles.enviar} type="submit" value="ENVIAR" />
               </form>
             </aside>
-            <div className={styles.redes}>
-              <img src="/localizacion.png" alt="Localizacion" />
-              <img src="/correo-electronico.png" alt="Correo" />
-              <img src="/llamada-telefonica.png" alt="Llamada" />
-              <img src="/icon-twitter.svg" alt="Twitter" />
-              <img src="/icon-facebook.svg" alt="Facebook" />
-              <img src="/icons8-instagram.svg" alt="Instagram" />
+            <div className={styles.redesWrapper}>
+              <div className={styles.redes}>
+                <img src="/icon-twitter.svg" alt="Twitter" />
+                <img src="/icon-facebook.svg" alt="Facebook" />
+                <img src="/icons8-instagram.svg" alt="Instagram" />
+              </div>
             </div>
+            <div className={styles.contactoInfo}>
+              <h3>¡CONTACTANOS!</h3>
+                <img src="/localizacion.png" alt="Localizacion" />
+                <p>Calle 14 #15-23, Barrio La Castellana,<br /> Armenia, Quindío, Colombia</p>
+                <br />
+
+                <img src="/llamada-telefonica.png" alt="Llamada" />
+                <p>+57 311 456 7890</p>
+                <br />
+                <img src="/correo-electronico.png" alt="Correo" />
+                <p>contacto@foodlab.com.co</p>
+              </div>
             <div className={styles.logo_pequeño}>
               <img src="/Logo.png" alt="Logo" />
             </div>
-            <div className={styles.contactanos}>
-              <p>¡CONTACTANOS!</p>
-            </div>
-          </section>
 
+          </section>
 
         </div>
       </main >
