@@ -76,18 +76,51 @@ export default function Landing() {
               <img src="/pexels-valeriya-1639562.jpg" alt="Fondo nosotros" />
             </div>
           </section >
+          <section className={styles.seccion_instalaciones}>
+            <div className={styles.carousel}>
+              <button onClick={handleLeft} className={styles.arrowLeft}>«</button>
 
-          <div className={styles.carousel}>
-            <button onClick={handleLeft} className={styles.arrowLeft}>«</button>
-
-            <div className={styles.container}>
-              <div className={`${styles.item} ${styles.center}`}>
-                <img src={images[activeIndex]} alt={`img-${activeIndex}`} />
+              <div className={styles.container}>
+                <div className={`${styles.item} ${styles.center}`}>
+                  <img src={images[activeIndex]} alt={`img-${activeIndex}`} />
+                </div>
               </div>
-            </div>
 
-            <button onClick={handleRight} className={styles.arrowRight}>»</button>
+              <button onClick={handleRight} className={styles.arrowRight}>»</button>
+            </div>
+          </section>
+          <div className={styles.fondo_contactanos}>
+            <img src="/pexels-liliana-drew-8555066.jpg" alt="Logo" />
           </div>
+
+          <section className={styles.seccion_contactanos}>
+            <aside className={styles.formulario}>
+              <h2>Envianos un mensaje</h2>
+              <form>
+                <label htmlFor="email">Email: </label>
+                <input type="text" placeholder="username@gmail.com" />
+
+                <label htmlFor="mensaje" className={styles.mensaje}>Mensaje: </label>
+                <textarea id="mensaje" className={styles.textarea}></textarea>
+
+                <input className={styles.enviar} type="submit" value="ENVIAR" />
+              </form>
+            </aside>
+            <div className={styles.redes}>
+              <img src="/localizacion.png" alt="Localizacion" />
+              <img src="/correo-electronico.png" alt="Correo" />
+              <img src="/llamada-telefonica.png" alt="Llamada" />
+              <img src="/icon-twitter.svg" alt="Twitter" />
+              <img src="/icon-facebook.svg" alt="Facebook" />
+              <img src="/icons8-instagram.svg" alt="Instagram" />
+            </div>
+            <div className={styles.logo_pequeño}>
+              <img src="/Logo.png" alt="Logo" />
+            </div>
+            <div className={styles.contactanos}>
+              <p>¡CONTACTANOS!</p>
+            </div>
+          </section>
 
 
         </div>
